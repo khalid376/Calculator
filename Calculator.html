@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> calculator</title>
+</head>
+
+<body>
+    <div id="container" style="width:80%;">
+        <table border="1" width="50%" hieght="50%">
+            <tr>
+                <th style="width:30% ;background-color:rgb(209, 218, 201) ;">Numbers</th>
+                <th style="width:30% ;background-color:rgb(207, 218, 196)">Inputs</th>
+            </tr>
+            <tr>
+                <td style="background-color:rgb(129, 183, 235)">First Number:</td>
+                <td style="padding:5px" align="center">
+                    <input type="text" id="first-number" style="border:2px inset white; background-color:rgb(175, 158, 171); color:white; height:20px" placeholder="Enter Your First Number..." />
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color:rgb(129, 183, 235)">Second Number:</td>
+                <td style="padding:5px" align="center">
+                    <input type="text" id="second-number" style="border:2px inset white; background-color:rgb(175, 158, 171); color:white; height:20px" placeholder="Enter Your Second Number..." />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border="1" width="100%">
+                        <tr>
+                            <td style="padding:5px ; background-color: rgb(5, 4, 4);">
+                                <button style="width:100%;border-style: double;border-radius: 50%;border-color: white; background-color:rgb(227, 231, 233);" onclick="add()">+</button>
+                            </td>
+                            <td style="padding:5px ;  background-color: white;">
+                                <button style="width:100%; border-style: double;border-radius: 50%;border-color: black; background-color:rgb(227, 231, 233);" onclick="subtract()">-
+    </button>
+                            </td>
+                            <td style="padding:5px ;  background-color: rgb(11, 138, 38);">
+                                <button style="width:100%; border-style: double;border-radius: 50%;border-color: white; background-color:rgb(227, 231, 233);" onclick="multiply()">*</button>
+                            </td>
+                            <td style="padding:5px ;  background-color: white;">
+                                <button style="width:100%; border-style: double;border-radius: 50%;border-color: black; background-color:rgb(227, 231, 233);" onclick="devide()">/</button>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center" id="result" colspan="2">
+                    Result...
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function add() {
+            var a = document.getElementById('first-number').value;
+            var b = document.getElementById('second-number').value;
+            var result = 0;
+            var a = parseInt(a);
+            var b = parseInt(b);
+            result = a + b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function subtract() {
+            var a = document.getElementById('first-number').value;
+            var b = document.getElementById('second-number').value;
+            var result = 0;
+            var a = parseInt(a);
+            var b = parseInt(b);
+            result = a - b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function multiply() {
+            var a = document.getElementById('first-number').value;
+            var b = document.getElementById('second-number').value;
+            var result = 0;
+            var a = parseInt(a);
+            var b = parseInt(b);
+            result = a * b;
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function devide() {
+            var a = document.getElementById('first-number').value;
+            var b = document.getElementById('second-number').value;
+            var result = 0;
+            var a = parseInt(a);
+            var b = parseInt(b);
+            result = a / b;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
